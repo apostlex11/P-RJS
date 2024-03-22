@@ -34,9 +34,6 @@ const tacos = () => {
 
 
 TODO:
-1) change 3d PC
-2) change logos for banner
-3) change color theme
-4) change style theme
-5) update work experience
-6) adjust the scrolling logo -> hero
+1) socials.jsx
+2) works.jsx
+3) constants/index.js

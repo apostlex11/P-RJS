@@ -5,10 +5,10 @@ import { styles } from '../styles';
 import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
+import Modal from './modal';
 
-// template_ed60vr6
-// service_a0zieic
-// uRfnDQqoBAMy_HhWn
+
+
 
 const Contact = () => {
   const formRef = useRef();
@@ -19,6 +19,8 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({...form, [name]: value})
@@ -29,20 +31,20 @@ const Contact = () => {
     setLoading(true);
 
     emailjs.send( 
-      'service_a0zieic',
-      'template_ed60vr6',
+      import.meta.env.VITE_EMAIL_SERVICE_ID,
+      import.meta.env.VITE_EMAIL_TEMPLATE_ID,
       {
         from_name: form.name,
         to_name: 'Terry',
         from_email: form.email,
-        to_email: 'businessla213@gmail.com',
+        to_email: import.meta.env.VITE_EMAIL,
         message: form.message,
       },
-      'uRfnDQqoBAMy_HhWn'
+      import.meta.env.VITE_EMAIL_PUBLIC_KEY
     )
     .then(() => {
       setLoading(false);
-      alert('Thank you, I will get back to you as soon as possible');
+      setModalOpen(true);
 
       setForm({
         name: '',
@@ -54,68 +56,78 @@ const Contact = () => {
       console.log(error);
       alert('Something went wrong.')
     })
-  }
+  };
+  
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   return (
-    <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
+    <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden '>
       <motion.div 
         variants={slideIn('left', 'tween', 0.2, 1)}
-        className={'flex-[0.75] bg-black-100 p-8 rounded-2xl'}
+        className={'flex-[0.75] bg-black-100 p-8 rounded-2xl bg-custom-color'}
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <p className={styles.sectionSubText}>Reach Out</p>
+        <h3 className={styles.sectionHeadText}>Contact</h3>
         <form 
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+          className='mt-12 flex flex-col gap-8 '
         >
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'> Your Name </span>
+            <span className='text-white font-medium mb-4'> Name </span>
             <input
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder='What is your name?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white 
+              placeholder='Your Name'
+              className='bg-custom-color3 py-4 px-6 placeholder:text-secondary text-white 
               rounded-lg outlined-none border-none font-medium'
             />
           </label>
 
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'> Your Email </span>
+            <span className='text-white font-medium mb-4'> Email </span>
             <input
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder='What is your Email?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white 
+              placeholder='Your Email'
+              className='bg-custom-color3 py-4 px-6 placeholder:text-secondary text-white 
               rounded-lg outlined-none border-none font-medium'
             />
           </label>
 
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'> Your Message </span>
+            <span className='text-white font-medium mb-4'> Message </span>
             <textarea
               rows='7'
               name='message'
               value={form.message}
               onChange={handleChange}
-              placeholder='What do you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white 
+              placeholder='Message'
+              className='bg-custom-color3 py-4 px-6 placeholder:text-secondary text-white 
               rounded-lg outlined-none border-none font-medium'
             />
           </label>
 
           <button
             type='submit'
-            className='bg-tertiary py-3 px=8 outline-none w-fit text-white font-bold shadow-md
+            className='bg-custom-color3 py-3 px-8 outline-none w-fit text-white font-bold shadow-md
              shadow-primary rounded-xl'
           >
             {loading ? 'Sending...' : 'Send'}
           </button>
         </form>
+        {modalOpen && (
+          <Modal
+            message= 'Thank you, I will get back to you as soon as possible!'
+            onClose={closeModal}
+            />
+        )}
       </motion.div>
 
       {/*earth model */}

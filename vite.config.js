@@ -10,5 +10,8 @@ export default defineConfig({
       'process.env.VITE_EMAIL': JSON.stringify(process.env.EMAIL)
     },
     plugins: [react()],
+    build: {
+      outDir: 'dist',
+    }
   }
 );

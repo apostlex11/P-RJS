@@ -20,9 +20,10 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.svg";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import portfolio3js from "./portfolio3js.png";
+import discExchange from "./discExchange.png";
+import valentines from "./valentines.png";
+
 
 export {
   logo,
@@ -45,7 +46,7 @@ export {
   redux,
   tailwind,
   threejs,
-  carrent,
-  jobit,
-  tripguide,
+  portfolio3js,
+  discExchange,
+  valentines,
 };

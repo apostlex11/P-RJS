@@ -14,9 +14,9 @@ import {
     git,
     figma,
     docker,
-    carrent,
-    jobit,
-    tripguide,
+    portfolio3js,
+    valentines,
+    discExchange,
     threejs,
   } from "../assets";
   
@@ -107,16 +107,16 @@ import {
   
   const projects = [
     {
-      name: "TITLE",
+      name: "Portfolio ThreeJS",
       description:
-        "Description",
+        "Built a responsive portfolio with React, featuring 3D visuals via Three.js, integrated contact form with EmailJS, and styled using Tailwind CSS.",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "threejs",
           color: "green-text-gradient",
         },
         {
@@ -124,53 +124,77 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
+      image: portfolio3js,
       demo_link: "https://github.com/1",
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/apostlex11/P-RJS",
     },
     {
-      name: "TITLE",
+      name: "DiscExchange",
       description:
-        "Description",
+        "Developed a marketplace for vinyls, cassettes, and CDs, similar to eBay, focused on buying and selling physical music media. ",
       tags: [
         {
-          name: "react",
+          name: "Javascript",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
+          name: "MySQL2",
+          color: "orange-text-gradient",
+        },
+        {
+          name: "HTML",
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "CSS",
           color: "pink-text-gradient",
         },
-      ],
-      image: jobit,
-      demo_link: "https://github.com/2",
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "TITLE",
-      description:
-        "Description",
-      tags: [
         {
-          name: "nextjs",
+          name: "Handlebars.js",
+          color: "orange-text-gradient",
+        },
+        {
+          name: "bootstrap",
           color: "blue-text-gradient",
         },
         {
-          name: "",
+          name: "multer",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "dotenv",
           color: "green-text-gradient",
         },
         {
-          name: "css",
+          name: "bcrypt",
+          color: "orange-text-gradient",
+        },
+      ],
+      image: discExchange,
+      demo_link: "https://serene-forest-09402.herokuapp.com/",
+      source_code_link: "https://github.com/apostlex11/DiscExchange",
+    },
+    {
+      name: "My Valentines",
+      description:
+        "Created a playful website for my girlfriend, asking her to be my Valentine, where 'no' isn't an option.",
+      tags: [
+        {
+          name: "Javascript",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "HTML",
+          color: "green-text-gradient",
+        },
+        {
+          name: "CSS",
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      demo_link: "https://github.com/3",
-      source_code_link: "https://github.com/",
+      image: valentines,
+      demo_link: "apostlex11.github.io/valentine/",
+      source_code_link: "https://github.com/apostlex11/valentine",
     },
   ];
   

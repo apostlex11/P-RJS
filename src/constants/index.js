@@ -125,7 +125,7 @@ import {
         },
       ],
       image: portfolio3js,
-      demo_link: "https://github.com/1",
+      demo_link: "https://terry-sa.com",
       source_code_link: "https://github.com/apostlex11/P-RJS",
     },
     {
@@ -193,7 +193,7 @@ import {
         },
       ],
       image: valentines,
-      demo_link: "apostlex11.github.io/valentine/",
+      demo_link: "https://apostlex11.github.io/valentine/",
       source_code_link: "https://github.com/apostlex11/valentine",
     },
   ];

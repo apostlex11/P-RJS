@@ -23,7 +23,7 @@ import threejs from "./tech/threejs.svg";
 import portfolio3js from "./portfolio3js.png";
 import discExchange from "./discExchange.png";
 import valentines from "./valentines.png";
-
+import workavatar from "./workavatar.png";
 
 export {
   logo,
@@ -49,4 +49,5 @@ export {
   portfolio3js,
   discExchange,
   valentines,
+  workavatar,
 };

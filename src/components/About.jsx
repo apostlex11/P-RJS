@@ -41,7 +41,7 @@ const About = () => {
         variants={fadeIn('', '', 0.1, 1)}
       >
        I am a software developer proficient in JavaScript, 
-       with specialized knowledge in frameworks such as React and Node.js, 
+       with specialized knowledge in libraries such as React and Node.js, 
        among others. Known for my rapid adaptability and collaborative approach, 
        I work closely with my team to deliver phenomenal results.
       </motion.p>

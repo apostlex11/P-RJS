@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
+import workavatar from '../assets/workavatar.png';
 
 
 const Hero = () => {
@@ -33,7 +34,7 @@ const Hero = () => {
             </ul>
         </div>
         <div className='avatar-image'>
-          <img src="./src/assets/workavatar.png"></img>
+          <img src={workavatar}></img>
         </div>
       </div>
 
